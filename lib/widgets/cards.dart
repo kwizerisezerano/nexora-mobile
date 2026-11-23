@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../theme/app_theme.dart';
 import 'common.dart';
@@ -85,7 +84,7 @@ class StatBand extends StatelessWidget {
               Text(
                 item.label,
                 textAlign: TextAlign.center,
-                style: GoogleFonts.inter(
+                style: TextStyle(
                   fontSize: 12.5,
                   fontWeight: FontWeight.w500,
                   color: context.nx.muted,
@@ -142,7 +141,7 @@ class ProjectCard extends StatelessWidget {
           const SizedBox(height: 4),
           Text(
             subtitle,
-            style: GoogleFonts.inter(
+            style: TextStyle(
               fontSize: 13,
               fontWeight: FontWeight.w600,
               color: context.brandAccent,
@@ -174,7 +173,7 @@ class ProjectCard extends StatelessWidget {
                     const SizedBox(width: 6),
                     Text(
                       'LIVE',
-                      style: GoogleFonts.inter(
+                      style: TextStyle(
                         fontSize: 10,
                         fontWeight: FontWeight.w700,
                         letterSpacing: 0.6,
@@ -190,7 +189,7 @@ class ProjectCard extends StatelessWidget {
             children: [
               Text(
                 actionLabel,
-                style: GoogleFonts.inter(
+                style: TextStyle(
                   fontSize: 13.5,
                   fontWeight: FontWeight.w600,
                   color: context.brandAccent,
@@ -261,7 +260,7 @@ class TestimonialCard extends StatelessWidget {
                 ),
                 child: Text(
                   name.isEmpty ? '?' : name[0],
-                  style: GoogleFonts.sora(
+                  style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
                     color: NxColors.white,
@@ -277,7 +276,7 @@ class TestimonialCard extends StatelessWidget {
                       name,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: GoogleFonts.inter(
+                      style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
                         color: p.heading,
@@ -288,7 +287,7 @@ class TestimonialCard extends StatelessWidget {
                       role,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: GoogleFonts.inter(fontSize: 12, color: p.muted),
+                      style: TextStyle(fontSize: 12, color: p.muted),
                     ),
                   ],
                 ),
@@ -323,9 +322,9 @@ class RoadmapCard extends StatelessWidget {
         children: [
           Text(
             step,
-            style: GoogleFonts.sora(
+            style: TextStyle(
               fontSize: 30,
-              fontWeight: FontWeight.w800,
+              fontWeight: FontWeight.w700,
               height: 1,
               color: context.isDark ? NxColors.brand500_30 : NxColors.brand200,
             ),
@@ -367,7 +366,7 @@ class CapabilityItem extends StatelessWidget {
         Expanded(
           child: Text(
             text,
-            style: GoogleFonts.inter(
+            style: TextStyle(
               fontSize: 14.5,
               fontWeight: FontWeight.w500,
               color: context.isDark ? NxColors.slate200 : NxColors.slate700,

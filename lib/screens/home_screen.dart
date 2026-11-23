@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../l10n/app_strings.dart';
 import '../theme/app_theme.dart';
@@ -171,7 +170,7 @@ class _TrustRow extends StatelessWidget {
             const SizedBox(width: 7),
             Text(
               label,
-              style: GoogleFonts.inter(fontSize: 13, color: context.nx.muted),
+              style: TextStyle(fontSize: 13, color: context.nx.muted),
             ),
           ],
         );
@@ -220,7 +219,7 @@ class _DashboardPanel extends StatelessWidget {
                     const SizedBox(width: 12),
                     Text(
                       'operations.nexora',
-                      style: GoogleFonts.inter(fontSize: 11.5, color: p.faint),
+                      style: TextStyle(fontSize: 11.5, color: p.faint),
                     ),
                   ],
                 ),
@@ -246,7 +245,7 @@ class _DashboardPanel extends StatelessWidget {
                                   strings
                                       .t('hero.panel.liveOverview')
                                       .toUpperCase(),
-                                  style: GoogleFonts.inter(
+                                  style: TextStyle(
                                     fontSize: 10.5,
                                     fontWeight: FontWeight.w600,
                                     letterSpacing: 1.1,
@@ -332,7 +331,7 @@ class _DashboardPanel extends StatelessWidget {
                               child: Text(
                                 d,
                                 textAlign: TextAlign.center,
-                                style: GoogleFonts.inter(
+                                style: TextStyle(
                                   fontSize: 10,
                                   color: p.faint,
                                 ),
@@ -379,7 +378,7 @@ class _MiniStat extends StatelessWidget {
           children: [
             Text(
               value,
-              style: GoogleFonts.sora(
+              style: TextStyle(
                 fontSize: 17,
                 fontWeight: FontWeight.w700,
                 color: p.heading,
@@ -390,7 +389,7 @@ class _MiniStat extends StatelessWidget {
               label,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: GoogleFonts.inter(fontSize: 10.5, color: p.muted),
+              style: TextStyle(fontSize: 10.5, color: p.muted),
             ),
           ],
         ),
@@ -425,7 +424,7 @@ class _VelocityChip extends StatelessWidget {
             children: [
               Text(
                 '+128%',
-                style: GoogleFonts.sora(
+                style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
                   color: p.heading,
@@ -433,7 +432,7 @@ class _VelocityChip extends StatelessWidget {
               ),
               Text(
                 label,
-                style: GoogleFonts.inter(fontSize: 10.5, color: p.muted),
+                style: TextStyle(fontSize: 10.5, color: p.muted),
               ),
             ],
           ),
@@ -537,9 +536,9 @@ class _CtaBand extends StatelessWidget {
                     child: Text(
                       strings.t('cta.title'),
                       textAlign: TextAlign.center,
-                      style: GoogleFonts.sora(
+                      style: const TextStyle(
                         fontSize: 30,
-                        fontWeight: FontWeight.w800,
+                        fontWeight: FontWeight.w700,
                         height: 1.1,
                         letterSpacing: -0.6,
                         color: NxColors.white,
@@ -552,7 +551,7 @@ class _CtaBand extends StatelessWidget {
                     child: Text(
                       strings.t('cta.subtitle'),
                       textAlign: TextAlign.center,
-                      style: GoogleFonts.inter(
+                      style: const TextStyle(
                         fontSize: 15.5,
                         height: 1.6,
                         color: NxColors.slate300,

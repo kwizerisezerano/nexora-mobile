@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../theme/app_theme.dart';
 
@@ -191,7 +190,7 @@ class NxEyebrow extends StatelessWidget {
         Flexible(
           child: Text(
             text.toUpperCase(),
-            style: GoogleFonts.inter(
+            style: TextStyle(
               fontSize: 11.5,
               fontWeight: FontWeight.w700,
               letterSpacing: 1.6,
@@ -394,7 +393,7 @@ class NxPill extends StatelessWidget {
           Flexible(
             child: Text(
               uppercase ? text.toUpperCase() : text,
-              style: GoogleFonts.inter(
+              style: TextStyle(
                 fontSize: fontSize,
                 fontWeight: fontWeight,
                 letterSpacing: letterSpacing,
@@ -551,7 +550,7 @@ class NxButton extends StatelessWidget {
                       label,
                       textAlign: TextAlign.center,
                       overflow: TextOverflow.ellipsis,
-                      style: GoogleFonts.inter(
+                      style: TextStyle(
                         fontSize: 15.5,
                         fontWeight: FontWeight.w600,
                         color: foreground,

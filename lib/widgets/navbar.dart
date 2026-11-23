@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../core/app_settings.dart';
 import '../l10n/app_strings.dart';
@@ -70,7 +69,7 @@ class _LanguageButton extends StatelessWidget {
                 Expanded(
                   child: Text(
                     AppStrings.localeNames[locale.languageCode] ?? locale.languageCode,
-                    style: GoogleFonts.inter(
+                    style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
                       color: p.heading,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../core/site.dart';
 import '../theme/app_theme.dart';
@@ -60,9 +59,9 @@ class _DrawnMark extends StatelessWidget {
           const SizedBox(width: 8),
           Text(
             'Nexora',
-            style: GoogleFonts.sora(
+            style: TextStyle(
               fontSize: height * 0.62,
-              fontWeight: FontWeight.w800,
+              fontWeight: FontWeight.w700,
               letterSpacing: -0.5,
               color: NxColors.brand700,
             ),

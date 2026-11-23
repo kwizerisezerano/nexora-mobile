@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 /// Brand + neutral palette derived from the Nexora Technologies website
 /// (Tailwind `brand` and `slate` scales). Brand green is the mandatory
@@ -234,7 +233,7 @@ class AppTheme {
         elevation: 0,
         scrolledUnderElevation: 0,
         centerTitle: false,
-        titleTextStyle: GoogleFonts.sora(
+        titleTextStyle: TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.w700,
           color: p.heading,
@@ -250,7 +249,7 @@ class AppTheme {
             : NxColors.brand500_15,
         labelTextStyle: WidgetStateProperty.resolveWith((states) {
           final selected = states.contains(WidgetState.selected);
-          return GoogleFonts.inter(
+          return TextStyle(
             fontSize: 11.5,
             fontWeight: selected ? FontWeight.w600 : FontWeight.w500,
             color: selected
@@ -276,14 +275,14 @@ class AppTheme {
         behavior: SnackBarBehavior.floating,
         backgroundColor:
             brightness == Brightness.dark ? NxColors.slate800 : NxColors.slate900,
-        contentTextStyle: GoogleFonts.inter(fontSize: 14, color: NxColors.white),
+        contentTextStyle: const TextStyle(fontSize: 14, color: NxColors.white),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: brightness == Brightness.dark ? NxColors.slate900 : NxColors.white,
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-        hintStyle: GoogleFonts.inter(color: p.muted),
+        hintStyle: TextStyle(color: p.muted),
         border: _inputBorder(p.cardBorder),
         enabledBorder: _inputBorder(p.cardBorder),
         focusedBorder: _inputBorder(NxColors.brand400, width: 1.6),
@@ -297,21 +296,23 @@ class AppTheme {
         borderSide: BorderSide(color: color, width: width),
       );
 
+  /// Typography uses the platform system font (San Francisco on iOS, Roboto on
+  /// Android) so the app reads natively, like most popular apps. Hierarchy comes
+  /// from size + weight only — no custom display face.
   static TextTheme _textTheme(NxPalette p) {
-    const sora = GoogleFonts.sora;
     return TextTheme(
-      displayLarge: sora(fontSize: 40, fontWeight: FontWeight.w800, height: 1.05, letterSpacing: -1, color: p.heading),
-      displayMedium: sora(fontSize: 34, fontWeight: FontWeight.w800, height: 1.08, letterSpacing: -0.8, color: p.heading),
-      displaySmall: sora(fontSize: 30, fontWeight: FontWeight.w700, height: 1.1, letterSpacing: -0.6, color: p.heading),
-      headlineMedium: sora(fontSize: 26, fontWeight: FontWeight.w700, height: 1.15, letterSpacing: -0.4, color: p.heading),
-      headlineSmall: sora(fontSize: 22, fontWeight: FontWeight.w700, height: 1.2, letterSpacing: -0.3, color: p.heading),
-      titleLarge: sora(fontSize: 18, fontWeight: FontWeight.w600, color: p.heading),
-      titleMedium: sora(fontSize: 16, fontWeight: FontWeight.w600, color: p.heading),
-      bodyLarge: GoogleFonts.inter(fontSize: 16, height: 1.6, color: p.body),
-      bodyMedium: GoogleFonts.inter(fontSize: 14, height: 1.6, color: p.body),
-      bodySmall: GoogleFonts.inter(fontSize: 13, height: 1.5, color: p.muted),
-      labelLarge: GoogleFonts.inter(fontSize: 14, fontWeight: FontWeight.w600),
-      labelSmall: GoogleFonts.inter(fontSize: 11, fontWeight: FontWeight.w600, letterSpacing: 1.6, color: NxColors.brand600),
+      displayLarge: TextStyle(fontSize: 40, fontWeight: FontWeight.w700, height: 1.05, letterSpacing: -0.5, color: p.heading),
+      displayMedium: TextStyle(fontSize: 34, fontWeight: FontWeight.w700, height: 1.08, letterSpacing: -0.4, color: p.heading),
+      displaySmall: TextStyle(fontSize: 30, fontWeight: FontWeight.w700, height: 1.1, letterSpacing: -0.4, color: p.heading),
+      headlineMedium: TextStyle(fontSize: 26, fontWeight: FontWeight.w700, height: 1.15, letterSpacing: -0.3, color: p.heading),
+      headlineSmall: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, height: 1.2, letterSpacing: -0.2, color: p.heading),
+      titleLarge: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: p.heading),
+      titleMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: p.heading),
+      bodyLarge: TextStyle(fontSize: 16, height: 1.6, color: p.body),
+      bodyMedium: TextStyle(fontSize: 14, height: 1.6, color: p.body),
+      bodySmall: TextStyle(fontSize: 13, height: 1.5, color: p.muted),
+      labelLarge: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+      labelSmall: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600, letterSpacing: 1.6, color: NxColors.brand600),
     );
   }
 }

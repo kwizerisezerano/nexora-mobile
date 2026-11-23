@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../l10n/app_strings.dart';
 import '../core/site.dart';
@@ -134,7 +133,7 @@ void _showCaseStudy(
               const SizedBox(height: 6),
               Text(
                 project['subtitle'] as String? ?? '',
-                style: GoogleFonts.inter(
+                style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w600,
                   color: context.brandAccent,

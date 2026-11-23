@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../l10n/app_strings.dart';
 import '../core/site.dart';
@@ -86,12 +85,12 @@ class AppFooter extends StatelessWidget {
               const SizedBox(height: 20),
               Text(
                 strings.t('footer.copyright'),
-                style: GoogleFonts.inter(fontSize: 13, color: p.muted),
+                style: TextStyle(fontSize: 13, color: p.muted),
               ),
               const SizedBox(height: 6),
               Text(
                 strings.t('footer.builtIn'),
-                style: GoogleFonts.inter(fontSize: 13, color: p.muted),
+                style: TextStyle(fontSize: 13, color: p.muted),
               ),
             ],
           ),
@@ -114,7 +113,7 @@ class _FooterColumn extends StatelessWidget {
       children: [
         Text(
           title.toUpperCase(),
-          style: GoogleFonts.sora(
+          style: TextStyle(
             fontSize: 12.5,
             fontWeight: FontWeight.w700,
             letterSpacing: 1.2,
@@ -143,7 +142,7 @@ class _FooterLink extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 6),
         child: Text(
           label,
-          style: GoogleFonts.inter(fontSize: 14, color: context.nx.body),
+          style: TextStyle(fontSize: 14, color: context.nx.body),
         ),
       ),
     );
@@ -172,7 +171,7 @@ class _IconLine extends StatelessWidget {
             Expanded(
               child: Text(
                 text,
-                style: GoogleFonts.inter(fontSize: 14, color: p.body),
+                style: TextStyle(fontSize: 14, color: p.body),
               ),
             ),
           ],

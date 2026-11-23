@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../l10n/app_strings.dart';
 import '../core/site.dart';
@@ -183,7 +182,7 @@ class _ContactInfo extends StatelessWidget {
         const SizedBox(height: 8),
         Text(
           strings.t('footer.builtIn'),
-          style: GoogleFonts.inter(fontSize: 13, color: p.muted),
+          style: TextStyle(fontSize: 13, color: p.muted),
         ),
       ],
     );
@@ -226,7 +225,7 @@ class _InfoRow extends StatelessWidget {
               children: [
                 Text(
                   data.label,
-                  style: GoogleFonts.inter(
+                  style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
                     color: p.heading,
@@ -270,7 +269,7 @@ class _Field extends StatelessWidget {
       children: [
         Text(
           label,
-          style: GoogleFonts.inter(
+          style: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w500,
             color: context.nx.body,
