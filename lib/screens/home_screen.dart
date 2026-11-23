@@ -72,78 +72,80 @@ class _Hero extends StatelessWidget {
         const Positioned.fill(child: GridOverlay()),
         Padding(
           padding: const EdgeInsets.fromLTRB(20, 36, 20, 28),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              NxReveal(
-                child: NxPill(
-                  text: strings.t('hero.badge'),
-                  leading: const PulseDot(size: 8),
-                  uppercase: true,
-                  fontSize: 10.5,
-                  letterSpacing: 1.2,
-                  textColor: context.brandLabel,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+          child: NxConstrained(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                NxReveal(
+                  child: NxPill(
+                    text: strings.t('hero.badge'),
+                    leading: const PulseDot(size: 8),
+                    uppercase: true,
+                    fontSize: 10.5,
+                    letterSpacing: 1.2,
+                    textColor: context.brandLabel,
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                  ),
                 ),
-              ),
-              const SizedBox(height: 22),
-              NxReveal(
-                delay: const Duration(milliseconds: 80),
-                child: Wrap(
-                  crossAxisAlignment: WrapCrossAlignment.center,
-                  children: [
-                    Text('${strings.t('hero.titleStart')} ', style: titleStyle),
-                    NxGradientText(
-                      strings.t('hero.titleAccent'),
-                      style: titleStyle,
-                    ),
-                  ],
+                const SizedBox(height: 22),
+                NxReveal(
+                  delay: const Duration(milliseconds: 80),
+                  child: Wrap(
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    children: [
+                      Text('${strings.t('hero.titleStart')} ', style: titleStyle),
+                      NxGradientText(
+                        strings.t('hero.titleAccent'),
+                        style: titleStyle,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              const SizedBox(height: 18),
-              NxReveal(
-                delay: const Duration(milliseconds: 160),
-                child: Text(
-                  strings.t('hero.subtitle'),
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyLarge
-                      ?.copyWith(color: p.body),
+                const SizedBox(height: 18),
+                NxReveal(
+                  delay: const Duration(milliseconds: 160),
+                  child: Text(
+                    strings.t('hero.subtitle'),
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyLarge
+                        ?.copyWith(color: p.body),
+                  ),
                 ),
-              ),
-              const SizedBox(height: 26),
-              NxReveal(
-                delay: const Duration(milliseconds: 240),
-                child: Column(
-                  children: [
-                    NxButton.primary(
-                      label: strings.t('hero.ctaPrimary'),
-                      icon: Icons.arrow_outward,
-                      expand: true,
-                      onPressed: () => onNavigate(4),
-                    ),
-                    const SizedBox(height: 12),
-                    NxButton.ghost(
-                      label: strings.t('hero.ctaSecondary'),
-                      icon: Icons.explore_outlined,
-                      expand: true,
-                      onPressed: () => onNavigate(1),
-                    ),
-                  ],
+                const SizedBox(height: 26),
+                NxReveal(
+                  delay: const Duration(milliseconds: 240),
+                  child: Column(
+                    children: [
+                      NxButton.primary(
+                        label: strings.t('hero.ctaPrimary'),
+                        icon: Icons.arrow_outward,
+                        expand: true,
+                        onPressed: () => onNavigate(4),
+                      ),
+                      const SizedBox(height: 12),
+                      NxButton.ghost(
+                        label: strings.t('hero.ctaSecondary'),
+                        icon: Icons.explore_outlined,
+                        expand: true,
+                        onPressed: () => onNavigate(1),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              const SizedBox(height: 24),
-              NxReveal(
-                delay: const Duration(milliseconds: 320),
-                child: _TrustRow(strings: strings),
-              ),
-              const SizedBox(height: 34),
-              NxReveal(
-                delay: const Duration(milliseconds: 280),
-                child: _DashboardPanel(strings: strings),
-              ),
-            ],
+                const SizedBox(height: 24),
+                NxReveal(
+                  delay: const Duration(milliseconds: 320),
+                  child: _TrustRow(strings: strings),
+                ),
+                const SizedBox(height: 34),
+                NxReveal(
+                  delay: const Duration(milliseconds: 280),
+                  child: _DashboardPanel(strings: strings),
+                ),
+              ],
+            ),
           ),
         ),
       ],
@@ -512,73 +514,75 @@ class _CtaBand extends StatelessWidget {
           const Positioned.fill(child: GridOverlay(opacity: 0.16)),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 60),
-            child: Column(
-              children: [
-                NxReveal(
-                  child: NxPill(
-                    text: strings.t('cta.badge'),
-                    leading: const Icon(Icons.auto_awesome,
-                        size: 14, color: NxColors.brand300),
-                    onDark: true,
-                    uppercase: true,
-                    fontSize: 10.5,
-                    letterSpacing: 1.2,
-                    textColor: NxColors.brand300,
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-                  ),
-                ),
-                const SizedBox(height: 22),
-                NxReveal(
-                  delay: const Duration(milliseconds: 80),
-                  child: Text(
-                    strings.t('cta.title'),
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.sora(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w800,
-                      height: 1.1,
-                      letterSpacing: -0.6,
-                      color: NxColors.white,
+            child: NxConstrained(
+              child: Column(
+                children: [
+                  NxReveal(
+                    child: NxPill(
+                      text: strings.t('cta.badge'),
+                      leading: const Icon(Icons.auto_awesome,
+                          size: 14, color: NxColors.brand300),
+                      onDark: true,
+                      uppercase: true,
+                      fontSize: 10.5,
+                      letterSpacing: 1.2,
+                      textColor: NxColors.brand300,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 14, vertical: 8),
                     ),
                   ),
-                ),
-                const SizedBox(height: 16),
-                NxReveal(
-                  delay: const Duration(milliseconds: 160),
-                  child: Text(
-                    strings.t('cta.subtitle'),
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.inter(
-                      fontSize: 15.5,
-                      height: 1.6,
-                      color: NxColors.slate300,
+                  const SizedBox(height: 22),
+                  NxReveal(
+                    delay: const Duration(milliseconds: 80),
+                    child: Text(
+                      strings.t('cta.title'),
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.sora(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w800,
+                        height: 1.1,
+                        letterSpacing: -0.6,
+                        color: NxColors.white,
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(height: 28),
-                NxReveal(
-                  delay: const Duration(milliseconds: 240),
-                  child: Column(
-                    children: [
-                      NxButton.primary(
-                        label: strings.t('cta.ctaPrimary'),
-                        icon: Icons.arrow_outward,
-                        expand: true,
-                        onPressed: onPrimary,
+                  const SizedBox(height: 16),
+                  NxReveal(
+                    delay: const Duration(milliseconds: 160),
+                    child: Text(
+                      strings.t('cta.subtitle'),
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.inter(
+                        fontSize: 15.5,
+                        height: 1.6,
+                        color: NxColors.slate300,
                       ),
-                      const SizedBox(height: 12),
-                      NxButton.ghost(
-                        label: strings.t('cta.ctaSecondary'),
-                        icon: Icons.explore_outlined,
-                        expand: true,
-                        onDark: true,
-                        onPressed: onSecondary,
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-              ],
+                  const SizedBox(height: 28),
+                  NxReveal(
+                    delay: const Duration(milliseconds: 240),
+                    child: Column(
+                      children: [
+                        NxButton.primary(
+                          label: strings.t('cta.ctaPrimary'),
+                          icon: Icons.arrow_outward,
+                          expand: true,
+                          onPressed: onPrimary,
+                        ),
+                        const SizedBox(height: 12),
+                        NxButton.ghost(
+                          label: strings.t('cta.ctaSecondary'),
+                          icon: Icons.explore_outlined,
+                          expand: true,
+                          onDark: true,
+                          onPressed: onSecondary,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

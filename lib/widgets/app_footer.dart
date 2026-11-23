@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../l10n/app_strings.dart';
-import '../site.dart';
+import '../core/site.dart';
 import '../theme/app_theme.dart';
-import '../utils.dart';
+import '../core/utils.dart';
 import 'common.dart';
 import 'nexora_logo.dart';
 
@@ -46,6 +46,7 @@ class AppFooter extends StatelessWidget {
                     NxIconBox(
                       size: 42,
                       background: p.surfaceAlt,
+                      semanticLabel: social.label,
                       onTap: social.label == 'WhatsApp'
                           ? () => openExternal(Site.whatsappUri)
                           : null,

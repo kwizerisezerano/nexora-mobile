@@ -273,7 +273,9 @@ class NxIconTile extends StatelessWidget {
 }
 
 /// Bordered rounded square wrapping a small icon or widget (app-bar actions,
-/// footer socials).
+/// footer socials). Interactive boxes keep their visual size but expand their
+/// tap target to at least [_minTapSize] to meet the Material 3 / iOS HIG
+/// minimum, and expose a [semanticLabel] to screen readers.
 class NxIconBox extends StatelessWidget {
   const NxIconBox({
     super.key,
@@ -281,12 +283,16 @@ class NxIconBox extends StatelessWidget {
     this.size = 40,
     this.background,
     this.onTap,
+    this.semanticLabel,
   });
+
+  static const _minTapSize = 48.0;
 
   final Widget child;
   final double size;
   final Color? background;
   final VoidCallback? onTap;
+  final String? semanticLabel;
 
   @override
   Widget build(BuildContext context) {
@@ -301,14 +307,29 @@ class NxIconBox extends StatelessWidget {
       ),
       child: child,
     );
-    if (onTap == null) return box;
-    return Material(
-      color: Colors.transparent,
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(12),
-        child: box,
-      ),
+
+    Widget result = box;
+    if (onTap != null) {
+      final target = size < _minTapSize ? _minTapSize : size;
+      result = Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(12),
+          child: SizedBox(
+            width: target,
+            height: target,
+            child: Center(child: box),
+          ),
+        ),
+      );
+    }
+
+    if (semanticLabel == null) return result;
+    return Semantics(
+      button: onTap != null,
+      label: semanticLabel,
+      child: result,
     );
   }
 }

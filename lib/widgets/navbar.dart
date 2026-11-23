@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../app_settings.dart';
+import '../core/app_settings.dart';
 import '../l10n/app_strings.dart';
 import '../theme/app_theme.dart';
 import 'common.dart';
@@ -97,10 +97,12 @@ class _ThemeToggle extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = context.isDark;
     final brightness = MediaQuery.of(context).platformBrightness;
+    final label = AppStrings.of(context).t('nav.themeLabel');
     return Tooltip(
-      message: AppStrings.of(context).t('nav.themeLabel'),
+      message: label,
       child: NxIconBox(
         onTap: () => settings.toggleTheme(brightness),
+        semanticLabel: label,
         child: Icon(
           dark ? Icons.wb_sunny_outlined : Icons.dark_mode_outlined,
           size: 20,

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../l10n/app_strings.dart';
-import '../site.dart';
+import '../core/site.dart';
 import '../theme/app_theme.dart';
-import '../utils.dart';
+import '../core/utils.dart';
 import '../widgets/cards.dart';
 import '../widgets/common.dart';
 import '../widgets/tab_page.dart';

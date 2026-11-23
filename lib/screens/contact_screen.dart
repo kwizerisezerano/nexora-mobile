@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../l10n/app_strings.dart';
-import '../site.dart';
+import '../core/site.dart';
 import '../theme/app_theme.dart';
-import '../utils.dart';
+import '../core/utils.dart';
 import '../widgets/common.dart';
 import '../widgets/tab_page.dart';
 
@@ -22,7 +22,6 @@ class _ContactScreenState extends State<ContactScreen> {
   final _name = TextEditingController();
   final _email = TextEditingController();
   final _message = TextEditingController();
-  bool _submitted = false;
 
   @override
   void dispose() {
@@ -48,16 +47,15 @@ class _ContactScreenState extends State<ContactScreen> {
     );
     openExternal(uri);
 
-    setState(() => _submitted = true);
-    Future.delayed(const Duration(seconds: 3), () {
-      if (!mounted) return;
-      setState(() {
-        _submitted = false;
-        _name.clear();
-        _email.clear();
-        _message.clear();
-      });
-    });
+    _name.clear();
+    _email.clear();
+    _message.clear();
+    FocusScope.of(context).unfocus();
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(
+        SnackBar(content: Text(AppStrings.of(context).t('contact.success'))),
+      );
   }
 
   @override
@@ -123,28 +121,6 @@ class _ContactScreenState extends State<ContactScreen> {
               expand: true,
               onPressed: _submit,
             ),
-            if (_submitted) ...[
-              const SizedBox(height: 16),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.check_circle_outline,
-                      size: 16, color: NxColors.brand500),
-                  const SizedBox(width: 8),
-                  Flexible(
-                    child: Text(
-                      strings.t('contact.success'),
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.inter(
-                        fontSize: 13.5,
-                        fontWeight: FontWeight.w600,
-                        color: context.brandAccent,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
           ],
         ),
       ),

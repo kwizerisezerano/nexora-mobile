@@ -272,6 +272,13 @@ class AppTheme {
           );
         }),
       ),
+      snackBarTheme: SnackBarThemeData(
+        behavior: SnackBarBehavior.floating,
+        backgroundColor:
+            brightness == Brightness.dark ? NxColors.slate800 : NxColors.slate900,
+        contentTextStyle: GoogleFonts.inter(fontSize: 14, color: NxColors.white),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: brightness == Brightness.dark ? NxColors.slate900 : NxColors.white,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../site.dart';
+import '../core/site.dart';
 import '../theme/app_theme.dart';
 
 /// Nexora "Green Orbit" logo. Uses the hosted brand asset and falls back to a

@@ -80,7 +80,7 @@ nexora-mobile/
 ## Customization
 
 ### Colors
-The app uses the green theme color `#19A657` (similar to the website). To change this, update the `ColorScheme` in `main.dart`.
+The app uses the green theme color `#28A745` (the brand accent). To change this, update the `ColorScheme` in `lib/theme/app_theme.dart`.
 
 ### Icons
 Currently using Material Icons. To add custom icons:

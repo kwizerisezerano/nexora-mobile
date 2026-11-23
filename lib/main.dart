@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'app_settings.dart';
+import 'core/app_settings.dart';
 import 'l10n/app_strings.dart';
 import 'screens/about_screen.dart';
 import 'screens/contact_screen.dart';
@@ -13,18 +13,23 @@ import 'theme/app_theme.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await AppStrings.load();
-  runApp(const NexoraApp());
+  final settings = await AppSettings.restore();
+  runApp(NexoraApp(settings: settings));
 }
 
 class NexoraApp extends StatefulWidget {
-  const NexoraApp({super.key});
+  const NexoraApp({super.key, this.settings});
+
+  /// Pre-resolved settings (theme + locale already restored from storage).
+  /// When omitted — e.g. in widget tests — in-memory defaults are used.
+  final AppSettings? settings;
 
   @override
   State<NexoraApp> createState() => _NexoraAppState();
 }
 
 class _NexoraAppState extends State<NexoraApp> {
-  final AppSettings _settings = AppSettings();
+  late final AppSettings _settings = widget.settings ?? AppSettings();
 
   @override
   void dispose() {
@@ -91,44 +96,52 @@ class _AppShellState extends State<AppShell> {
       const ContactScreen(),
     ];
 
-    return Scaffold(
-      body: IndexedStack(index: _index, children: screens),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: p.card,
-          border: Border(top: BorderSide(color: p.divider)),
-        ),
-        child: NavigationBar(
-          selectedIndex: _index,
-          onDestinationSelected: _goTo,
-          labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
-          destinations: [
-            NavigationDestination(
-              icon: const Icon(Icons.home_outlined),
-              selectedIcon: const Icon(Icons.home),
-              label: strings.t('nav.home'),
-            ),
-            NavigationDestination(
-              icon: const Icon(Icons.laptop_mac_outlined),
-              selectedIcon: const Icon(Icons.laptop_mac),
-              label: strings.t('nav.services'),
-            ),
-            NavigationDestination(
-              icon: const Icon(Icons.info_outline),
-              selectedIcon: const Icon(Icons.info),
-              label: strings.t('nav.about'),
-            ),
-            NavigationDestination(
-              icon: const Icon(Icons.grid_view_outlined),
-              selectedIcon: const Icon(Icons.grid_view),
-              label: strings.t('nav.portfolio'),
-            ),
-            NavigationDestination(
-              icon: const Icon(Icons.mail_outline),
-              selectedIcon: const Icon(Icons.mail),
-              label: strings.t('nav.contact'),
-            ),
-          ],
+    return PopScope(
+      // On Android, back returns to the Home tab before it can exit the app.
+      canPop: _index == 0,
+      onPopInvokedWithResult: (didPop, _) {
+        if (didPop || _index == 0) return;
+        setState(() => _index = 0);
+      },
+      child: Scaffold(
+        body: IndexedStack(index: _index, children: screens),
+        bottomNavigationBar: Container(
+          decoration: BoxDecoration(
+            color: p.card,
+            border: Border(top: BorderSide(color: p.divider)),
+          ),
+          child: NavigationBar(
+            selectedIndex: _index,
+            onDestinationSelected: _goTo,
+            labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+            destinations: [
+              NavigationDestination(
+                icon: const Icon(Icons.home_outlined),
+                selectedIcon: const Icon(Icons.home),
+                label: strings.t('nav.home'),
+              ),
+              NavigationDestination(
+                icon: const Icon(Icons.laptop_mac_outlined),
+                selectedIcon: const Icon(Icons.laptop_mac),
+                label: strings.t('nav.services'),
+              ),
+              NavigationDestination(
+                icon: const Icon(Icons.info_outline),
+                selectedIcon: const Icon(Icons.info),
+                label: strings.t('nav.about'),
+              ),
+              NavigationDestination(
+                icon: const Icon(Icons.grid_view_outlined),
+                selectedIcon: const Icon(Icons.grid_view),
+                label: strings.t('nav.portfolio'),
+              ),
+              NavigationDestination(
+                icon: const Icon(Icons.mail_outline),
+                selectedIcon: const Icon(Icons.mail),
+                label: strings.t('nav.contact'),
+              ),
+            ],
+          ),
         ),
       ),
     );
