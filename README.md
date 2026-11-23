@@ -2,6 +2,18 @@
 
 A Flutter mobile application for Nexora Technologies, compatible with iOS, Android, and Web platforms.
 
+## Download (Android)
+
+Get the latest installable APK — free, no Play Store required:
+
+**https://github.com/kwizerisezerano/nexora-mobile/releases/latest**
+
+On your Android device, open the link, download `app-release.apk`, and tap it to
+install (you may need to allow "Install unknown apps" for your browser).
+
+A new APK is published automatically whenever a version tag (e.g. `v1.0.0`) is
+pushed — see [Releasing](#releasing).
+
 ## Features
 
 - **Cross-platform**: Works on iOS, Android, and Web
@@ -65,16 +77,15 @@ flutter build web
 ```
 nexora-mobile/
 ├── lib/
-│   ├── main.dart              # App entry point
-│   └── screens/              # Screen widgets
-│       ├── home_screen.dart
-│       ├── services_screen.dart
-│       ├── about_screen.dart
-│       ├── portfolio_screen.dart
-│       └── contact_screen.dart
-├── android/                   # Android specific files
-├── ios/                       # iOS specific files
-└── web/                       # Web specific files
+│   ├── main.dart              # App entry point (root only)
+│   ├── core/                  # Cross-cutting: settings, site data, utils
+│   ├── l10n/                  # Localization (en, fr, sw)
+│   ├── screens/               # Tab screens
+│   ├── theme/                 # Theme + system typography
+│   └── widgets/               # Shared UI primitives
+├── android/                   # Android platform files
+├── ios/                       # iOS platform files
+└── web/                       # Web preview target
 ```
 
 ## Customization
@@ -93,17 +104,32 @@ Currently using Material Icons. To add custom icons:
 2. Add the screen to the `_screens` list in `main.dart`
 3. Update the `BottomNavigationBar` items
 
-## Publishing
+## Releasing
 
-### Android
+Android releases are automated by
+[`.github/workflows/release-apk.yml`](.github/workflows/release-apk.yml): pushing
+a version tag runs analyze + tests, builds `app-release.apk`, and attaches it to
+a public GitHub Release.
+
 ```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+To build locally instead:
+
+```bash
+# Android
 flutter build apk --release
+
+# iOS
+flutter build ios --release
 ```
 
 ### iOS
-```bash
-flutter build ios --release
-```
+
+iOS distribution requires an Apple Developer account ($99/yr) for provisioning
+and App Store / TestFlight delivery, so iOS is not part of the free APK pipeline.
 
 ## License
 
