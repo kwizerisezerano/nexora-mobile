@@ -33,7 +33,9 @@ jobs:
         run: flutter pub get
 
       - name: Analyze
-        run: flutter analyze
+        # Info-level deprecation notices (e.g. material.dart) must not fail the
+        # release; errors and warnings still do.
+        run: flutter analyze --no-fatal-infos
 
       - name: Run tests
         run: flutter test
