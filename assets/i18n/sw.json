@@ -1,0 +1,182 @@
+{
+  "nav": {
+    "home": "Nyumbani",
+    "services": "Huduma",
+    "about": "Kutuhusu",
+    "portfolio": "Kazi Zetu",
+    "contact": "Wasiliana",
+    "startProject": "Anzisha mradi",
+    "languageLabel": "Badilisha lugha",
+    "themeLabel": "Badilisha mandhari",
+    "light": "Nuru",
+    "dark": "Giza",
+    "system": "Mfumo"
+  },
+  "hero": {
+    "badge": "Mshirika wako mkuu wa teknolojia Rwanda",
+    "titleStart": "Kujenga Mustakabali wa",
+    "titleAccent": "Teknolojia",
+    "subtitle": "Nexora Technologies inaunda programu bunifu — programu za wavuti na simu, API za nyuma na mifumo ya biashara — kwa mashirika nchini Rwanda na zaidi.",
+    "ctaPrimary": "Anzisha Mradi Wako",
+    "ctaSecondary": "Gundua Huduma",
+    "trust1": "Uwasilishaji wa kuaminika",
+    "trust2": "Tupo Kigali, Rwanda",
+    "trust3": "Msaada wa 24/7",
+    "panel": {
+      "liveOverview": "Muhtasari wa moja kwa moja",
+      "systemHealth": "Afya ya Mfumo",
+      "online": "Mtandaoni",
+      "deployments": "Usambazaji",
+      "uptime": "Upatikanaji",
+      "tasksDone": "Kazi zilizokamilika",
+      "velocity": "Kasi ya uwasilishaji"
+    },
+    "days": ["Jtt", "Jnn", "Jtn", "Alh", "Ijm", "Jms", "Jpi"]
+  },
+  "stats": {
+    "projects": "Miradi iliyowasilishwa",
+    "clients": "Wateja wenye furaha",
+    "years": "Miaka ya uzoefu",
+    "support": "Msaada unapatikana",
+    "note": "Inaaminika na shule, kliniki, wafanyabiashara na startups kote Rwanda."
+  },
+  "services": {
+    "eyebrow": "Tunachofanya",
+    "title": "Huduma Zetu",
+    "subtitle": "Tunaanza na ukuzaji wa programu kama msingi — bidhaa za vitendo na za kuaminika zilizoundwa kutatua matatizo ya kweli.",
+    "name": "Ukuzaji wa Programu",
+    "badge": "Anza Sasa",
+    "description": "Ukuzaji wa programu kamili — kutoka wazo la kwanza hadi uzinduzi na zaidi — ulioundwa kuwa wa kuaminika, unaoweza kukua na rahisi kudumisha.",
+    "ctaPrimary": "Anzisha Mradi Wako",
+    "whatWeBuild": "Tunachounda",
+    "capabilities": [
+      "Ukuzaji wa programu za wavuti",
+      "Ukuzaji wa programu za simu",
+      "Ukuzaji wa backend na API",
+      "Mifumo ya usimamizi wa biashara",
+      "Bidhaa za SaaS",
+      "Ubunifu na usimamizi wa hifadhidata",
+      "Upimaji wa programu",
+      "Ukuzaji wa portfolio za kidijitali"
+    ]
+  },
+  "about": {
+    "eyebrow": "Sisi ni nani",
+    "title": "Kutuhusu",
+    "subtitle": "Kampuni ya teknolojia na uhandisi inayoaminika Rwanda, inayohudumia Afrika na masoko ya kimataifa.",
+    "missionTitle": "Dhamira Yetu",
+    "missionText": "Kuunda suluhisho za teknolojia za vitendo, za kuaminika na zinazopatikana ambazo husaidia mashirika kufanya kazi vyema zaidi na kutatua matatizo ya kweli.",
+    "visionTitle": "Maono Yetu",
+    "visionText": "Kuwa kampuni ya teknolojia na uhandisi inayoaminika Rwanda, kisha kuhudumia Afrika na masoko ya kimataifa.",
+    "journeyEyebrow": "Safari Yetu",
+    "journeyTitle": "Ramani ya Ukuaji",
+    "roadmap": [
+      { "title": "Hatua 1: Uzinduzi", "description": "Msisitizo wa ukuzaji wa programu. Usajili wa kampuni, tovuti, kazi zetu, wateja wa kwanza." },
+      { "title": "Hatua 2: Unda Bidhaa", "description": "Geuza mahitaji ya mara kwa mara kuwa bidhaa zinazoweza kutumika tena au SaaS. Mikataba ya msaada na matengenezo." },
+      { "title": "Hatua 3: Panua", "description": "Jaribu suluhisho za IoT. Shirikiana na wataalamu waliohitimu wa mtandao na vifaa." },
+      { "title": "Hatua 4: Kua", "description": "Uunganishaji wa mifumo, miundombinu inayosimamiwa, uendeshaji wa kiotomatiki, uwasilishaji wa kikanda." }
+    ]
+  },
+  "portfolio": {
+    "eyebrow": "Kazi Zetu",
+    "title": "Kazi Zetu",
+    "subtitle": "Kazi zilizochaguliwa katika fintech, afya, elimu na uchanganuzi wa data — zilizoundwa kwa mashirika nchini Rwanda na zaidi.",
+    "live": "Hai",
+    "visitSite": "Tembelea tovuti",
+    "caseStudy": "Uchunguzi wa kesi",
+    "requestDemo": "Omba onyesho",
+    "projects": [
+      {
+        "title": "TontineHub",
+        "subtitle": "Okoa Pamoja. Kua Pamoja. Shinda Pamoja.",
+        "description": "Hubadilisha gumzo za kikundi zenye fujo na rekodi za karatasi kwa jukwaa moja lenye nguvu. Hakuna majedwali. Hakuna mkanganyiko. Kila faranga inafuatiliwa kwa wakati halisi, mikopo inaidhinishwa kwa dakika — wanachama 10,000+ wanaweza kuokoa.",
+        "category": "Jukwaa la Fintech"
+      },
+      {
+        "title": "GECO Rwanda",
+        "subtitle": "Kiongozi wa Huduma ya Kifafa Tangu 2010",
+        "description": "Jukwaa la kidijitali linalosaidia huduma kamili ya kifafa, kupambana na unyanyapaa, na kujenga jamii jumuishi kote Rwanda — kubadilisha maisha kwa huduma ya huruma tangu 2010.",
+        "category": "Afya · NGO"
+      },
+      {
+        "title": "Tontine MIS (TMIS)",
+        "subtitle": "Mfumo wa Taarifa wa Usimamizi wa Tontine",
+        "description": "Mfumo kamili wa taarifa wa usimamizi wa tontine uliojengwa kwa Nuxt.js, ukiboresha shughuli, usimamizi wa wanachama, na ufuatiliaji wa kifedha kwa vikundi vya akiba vya jamii.",
+        "category": "Mfumo wa Usimamizi"
+      },
+      {
+        "title": "Menya-Tech",
+        "subtitle": "Jukwaa la Elimu ya Teknolojia na Ubunifu",
+        "description": "Jukwaa kamili la kujifunza kwa elimu ya teknolojia na ubunifu, linaloshughulikia Ukuzaji wa Programu (SOD), Mitandao, Midia, moduli za chuo kikuu, na programu za diploma za kiufundi.",
+        "category": "Jukwaa la EdTech"
+      },
+      {
+        "title": "El Verbuena",
+        "subtitle": "Kazi za Mbunifu wa Michoro na UI",
+        "description": "Tovuti ya kazi za kisasa na ya kifahari kwa mbunifu wa michoro na UI, inayoonyesha kazi za ubunifu, miradi ya utambulisho, na utaalamu wa ubunifu wa kuona kwa mwonekano safi unaoakisi utambulisho wa mbunifu.",
+        "category": "Tovuti · Kazi"
+      },
+      {
+        "title": "Dashibodi ya Uchanganuzi wa EHR",
+        "subtitle": "Ufuatiliaji wa Kidijitali wa Hatari ya Wagonjwa",
+        "description": "Jukwaa la kusaidia maamuzi ya kimatibabu linalogeuza data mbichi ya Rekodi za Afya za Kielektroniki (EHR) kuwa hatua — antibiogramu zilizokusanywa, ufuatiliaji wa matumizi ya ATC/DDD ya WHO, alama za hatari za XGBoost, na arifa za wakati halisi za bakteria sugu.",
+        "category": "Mradi wa Mwaka wa Mwisho"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Ushuhuda",
+    "title": "Wateja Wetu Wanasema Nini",
+    "subtitle": "Inaaminika na biashara kote Rwanda kwa suluhisho za teknolojia za kuaminika.",
+    "items": [
+      { "role": "Timu ya Waasisi", "text": "Nexora iligeuza mchakato wetu wa akiba wa mikono kuwa jukwaa la wakati halisi. Kila faranga inafuatiliwa, mikopo inaidhinishwa kwa dakika, na wanachama wetu 10,000+ hatimaye wanaamini namba." },
+      { "role": "Programu ya Huduma ya Kifafa", "text": "Jukwaa lililojengwa na Nexora linawapa timu zetu za huduma mahali kimoja cha kusimamia kesi na kubadilishana taarifa. Limepunguza karatasi nyuma ya huduma ya huruma tunayotoa." },
+      { "role": "Mteja wa Mfumo wa Usimamizi", "text": "Nexora ilijenga mfumo wa taarifa wa usimamizi ulioleta shughuli zetu, rekodi za wanachama, na fedha mahali kimoja — ukibadilisha majedwali yaliyotawanyika kwa kitu ambacho timu yetu inafurahia kutumia." },
+      { "role": "Timu ya Jukwaa la Kujifunza", "text": "Walikabidhi jukwaa la kujifunza linalosaidia programu yetu yote — ukuzaji wa programu, mitandao, midia, na moduli za diploma — kwa wakati na limejengwa kukua nasi." },
+      { "role": "Mbunifu wa Michoro na UI", "text": "Nexora ilikabidhi kazi inayolingana hatimaye na ubora wa kazi yangu — safi, haraka, na ya kifahari. Inaonyesha miradi yangu ya utambulisho na ubunifu jinsi nilivyotaka." }
+    ]
+  },
+  "cta": {
+    "badge": "Tufanye kazi pamoja",
+    "title": "Uko tayari kujenga kitu kikubwa?",
+    "subtitle": "Wacha tugeuze wazo lako kuwa suluhisho la teknolojia la kuaminika na linaloweza kukua. Tuambie unajenga nini.",
+    "ctaPrimary": "Anzisha Mradi Wako",
+    "ctaSecondary": "Gundua Huduma"
+  },
+  "contact": {
+    "eyebrow": "Wasiliana Nasi",
+    "title": "Wasiliana",
+    "subtitle": "Uko tayari kubadilisha biashara yako kwa teknolojia? Wasiliana nasi leo.",
+    "infoTitle": "Taarifa za Mawasiliano",
+    "infoDesc": "Wasiliana nasi kupitia njia yoyote hapa chini na timu yetu itakujibu hivi karibuni.",
+    "locationLabel": "Mahali",
+    "locationValue": "Kigali, Rwanda",
+    "emailLabel": "Barua pepe",
+    "phoneLabel": "Simu",
+    "hoursLabel": "Saa za Kazi",
+    "hoursValue": "Jtt - Ijm : 8:00 asubuhi - 6:00 jioni",
+    "nameLabel": "Jina",
+    "namePlaceholder": "Jina lako",
+    "emailFieldLabel": "Barua pepe",
+    "emailPlaceholder": "barua{'@'}pepe.com",
+    "messageLabel": "Ujumbe",
+    "messagePlaceholder": "Tuambie kuhusu mradi wako...",
+    "submit": "Tuma Ujumbe",
+    "success": "Programu yako ya barua pepe inafunguka — bofya tu kutuma na tutawasiliana."
+  },
+  "footer": {
+    "tagline": "Kujenga mustakabali wa teknolojia Rwanda na zaidi.",
+    "servicesTitle": "Huduma",
+    "services": ["Programu za Wavuti", "Programu za Simu", "Backend & API", "Mifumo ya Biashara", "Bidhaa za SaaS", "Upimaji wa Programu"],
+    "companyTitle": "Kampuni",
+    "companyAbout": "Kutuhusu",
+    "companyServices": "Huduma",
+    "companyPortfolio": "Kazi Zetu",
+    "companyContact": "Wasiliana",
+    "connectTitle": "Ungana Nasi",
+    "location": "Kigali, Rwanda",
+    "hours": "Jtt - Ijm : 8:00 asubuhi - 6:00 jioni",
+    "copyright": "© 2026 Nexora Technologies. Haki zote zimehifadhiwa.",
+    "builtIn": "Imeundwa Kigali, Rwanda."
+  }
+}

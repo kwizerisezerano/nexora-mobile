@@ -1,0 +1,182 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "startProject": "Start a project",
+    "languageLabel": "Change language",
+    "themeLabel": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "hero": {
+    "badge": "Rwanda's Premier Technology Partner",
+    "titleStart": "Building the Future of",
+    "titleAccent": "Technology",
+    "subtitle": "Nexora Technologies builds innovative software — web and mobile apps, backend APIs, and enterprise systems — for organizations across Rwanda and beyond.",
+    "ctaPrimary": "Start Your Project",
+    "ctaSecondary": "Explore Services",
+    "trust1": "Reliable delivery",
+    "trust2": "Based in Kigali, Rwanda",
+    "trust3": "24/7 support",
+    "panel": {
+      "liveOverview": "Live overview",
+      "systemHealth": "System Health",
+      "online": "Online",
+      "deployments": "Deployments",
+      "uptime": "Uptime",
+      "tasksDone": "Tasks done",
+      "velocity": "Delivery velocity"
+    },
+    "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+  },
+  "stats": {
+    "projects": "Projects delivered",
+    "clients": "Happy clients",
+    "years": "Years of experience",
+    "support": "Support available",
+    "note": "Trusted by schools, clinics, retailers and startups across Rwanda."
+  },
+  "services": {
+    "eyebrow": "What We Do",
+    "title": "Our Services",
+    "subtitle": "We're launching with software development at the core — practical, reliable products built to solve real problems.",
+    "name": "Software Development",
+    "badge": "Launch Now",
+    "description": "End-to-end software development — from the first idea to launch and beyond — engineered to be reliable, scalable and easy to maintain.",
+    "ctaPrimary": "Start Your Project",
+    "whatWeBuild": "What We Build",
+    "capabilities": [
+      "Web application development",
+      "Mobile application development",
+      "Backend and API development",
+      "Enterprise management systems",
+      "SaaS products",
+      "Database design and management",
+      "Software testing",
+      "Digital Portfolio Development"
+    ]
+  },
+  "about": {
+    "eyebrow": "Who We Are",
+    "title": "About Us",
+    "subtitle": "A trusted technology and engineering company in Rwanda, serving Africa and international markets.",
+    "missionTitle": "Our Mission",
+    "missionText": "Create practical, reliable and accessible technology solutions that help organizations operate better and solve real problems.",
+    "visionTitle": "Our Vision",
+    "visionText": "Become a trusted technology and engineering company in Rwanda, then serve Africa and international markets.",
+    "journeyEyebrow": "Our Journey",
+    "journeyTitle": "Growth Roadmap",
+    "roadmap": [
+      { "title": "Stage 1: Launch", "description": "Software development focus. Company registration, website, portfolio, first clients." },
+      { "title": "Stage 2: Build Products", "description": "Turn repeated needs into reusable products or SaaS. Support and maintenance contracts." },
+      { "title": "Stage 3: Expand", "description": "Pilot IoT solutions. Partner with qualified network and hardware specialists." },
+      { "title": "Stage 4: Scale", "description": "Systems integration, managed infrastructure, automation, regional delivery." }
+    ]
+  },
+  "portfolio": {
+    "eyebrow": "Our Work",
+    "title": "Our Portfolio",
+    "subtitle": "Selected work across fintech, healthcare, education, and analytics — built for organizations in Rwanda and beyond.",
+    "live": "Live",
+    "visitSite": "Visit site",
+    "caseStudy": "Case study",
+    "requestDemo": "Request a demo",
+    "projects": [
+      {
+        "title": "TontineHub",
+        "subtitle": "Save Together. Grow Together. Win Together.",
+        "description": "Replaces messy group chats and paper records with one powerful platform. No spreadsheets. No confusion. Every franc tracked in real time, loans approved in minutes — 10,000+ members can save.",
+        "category": "Fintech Platform"
+      },
+      {
+        "title": "GECO Rwanda",
+        "subtitle": "Leading Epilepsy Care Since 2010",
+        "description": "A digital platform supporting comprehensive epilepsy care, fighting stigma, and building inclusive communities across Rwanda — transforming lives through compassionate care since 2010.",
+        "category": "Healthcare · NGO"
+      },
+      {
+        "title": "Tontine MIS (TMIS)",
+        "subtitle": "Tontine Management Information System",
+        "description": "A comprehensive tontine management information system built with Nuxt.js, streamlining operations, member management, and financial tracking for community savings groups.",
+        "category": "Management System"
+      },
+      {
+        "title": "Menya-Tech",
+        "subtitle": "Technology & Innovation Education Platform",
+        "description": "A comprehensive learning platform for technology and innovation education, covering Software Development (SOD), Networking, Multimedia, university modules, and technical diploma programmes.",
+        "category": "EdTech Platform"
+      },
+      {
+        "title": "El Verbuena",
+        "subtitle": "Graphic & UI Designer Portfolio",
+        "description": "A modern, elegant portfolio site for a graphic and UI designer, showcasing creative works, branding projects, and visual design expertise with a clean aesthetic that reflects the designer's identity.",
+        "category": "Website · Portfolio"
+      },
+      {
+        "title": "EHR Analytics Dashboard",
+        "subtitle": "Predictive Patient Risk Monitoring",
+        "description": "A clinical decision-support platform that turns raw Electronic Health Record data into action — cumulative antibiograms, WHO ATC/DDD consumption tracking, XGBoost risk scores, and real-time superbug alerts.",
+        "category": "Final Year Project"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "What Our Clients Say",
+    "subtitle": "Trusted by businesses across Rwanda for reliable technology solutions.",
+    "items": [
+      { "role": "Founding Team", "text": "Nexora turned our manual savings process into a real-time platform. Every franc is tracked, loans are approved in minutes, and our 10,000+ members finally trust the numbers." },
+      { "role": "Epilepsy Care Programme", "text": "The platform Nexora built gives our care teams one place to manage cases and share information. It has cut the paperwork behind the compassionate care we deliver." },
+      { "role": "Management System Client", "text": "Nexora built a management information system that brought our operations, member records, and finances into one place — replacing scattered spreadsheets with something our team actually enjoys using." },
+      { "role": "Learning Platform Team", "text": "They delivered a learning platform that supports our whole programme — software development, networking, multimedia, and diploma modules — on schedule and built to grow with us." },
+      { "role": "Graphic & UI Designer", "text": "Nexora delivered a portfolio that finally matches the quality of my work — clean, fast, and elegant. It presents my branding and design projects exactly the way I wanted." }
+    ]
+  },
+  "cta": {
+    "badge": "Let's work together",
+    "title": "Ready to build something great?",
+    "subtitle": "Let's turn your idea into a reliable, scalable technology solution. Tell us what you're building.",
+    "ctaPrimary": "Start Your Project",
+    "ctaSecondary": "Explore Services"
+  },
+  "contact": {
+    "eyebrow": "Get In Touch",
+    "title": "Contact Us",
+    "subtitle": "Ready to transform your business with technology? Get in touch with us today.",
+    "infoTitle": "Contact Information",
+    "infoDesc": "Reach out through any of the channels below and our team will get back to you shortly.",
+    "locationLabel": "Location",
+    "locationValue": "Kigali, Rwanda",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "hoursLabel": "Working Hours",
+    "hoursValue": "Mon - Fri: 8:00 AM - 6:00 PM",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailFieldLabel": "Email",
+    "emailPlaceholder": "your{'@'}email.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell us about your project...",
+    "submit": "Send Message",
+    "success": "Your email app is opening — just hit send and we'll be in touch."
+  },
+  "footer": {
+    "tagline": "Building the future of technology in Rwanda and beyond.",
+    "servicesTitle": "Services",
+    "services": ["Web Applications", "Mobile Applications", "Backend & APIs", "Enterprise Systems", "SaaS Products", "Software Testing"],
+    "companyTitle": "Company",
+    "companyAbout": "About Us",
+    "companyServices": "Services",
+    "companyPortfolio": "Portfolio",
+    "companyContact": "Contact",
+    "connectTitle": "Connect",
+    "location": "Kigali, Rwanda",
+    "hours": "Mon - Fri: 8:00 AM - 6:00 PM",
+    "copyright": "© 2026 Nexora Technologies. All rights reserved.",
+    "builtIn": "Built in Kigali, Rwanda."
+  }
+}

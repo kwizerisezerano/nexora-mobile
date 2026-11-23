@@ -1,0 +1,182 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À propos",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "startProject": "Démarrer un projet",
+    "languageLabel": "Changer de langue",
+    "themeLabel": "Changer de thème",
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système"
+  },
+  "hero": {
+    "badge": "Votre partenaire technologique de premier plan au Rwanda",
+    "titleStart": "Construire l'avenir de la",
+    "titleAccent": "Technologie",
+    "subtitle": "Nexora Technologies conçoit des logiciels innovants — applications web et mobiles, API backend et systèmes d'entreprise — pour les organisations au Rwanda et au-delà.",
+    "ctaPrimary": "Démarrer votre projet",
+    "ctaSecondary": "Découvrir nos services",
+    "trust1": "Livraison fiable",
+    "trust2": "Basés à Kigali, Rwanda",
+    "trust3": "Support 24/7",
+    "panel": {
+      "liveOverview": "Aperçu en direct",
+      "systemHealth": "État du système",
+      "online": "En ligne",
+      "deployments": "Déploiements",
+      "uptime": "Disponibilité",
+      "tasksDone": "Tâches terminées",
+      "velocity": "Vitesse de livraison"
+    },
+    "days": ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"]
+  },
+  "stats": {
+    "projects": "Projets livrés",
+    "clients": "Clients satisfaits",
+    "years": "Années d'expérience",
+    "support": "Support disponible",
+    "note": "La confiance des écoles, cliniques, commerçants et startups à travers le Rwanda."
+  },
+  "services": {
+    "eyebrow": "Ce que nous faisons",
+    "title": "Nos services",
+    "subtitle": "Nous lançons avec le développement logiciel au cœur — des produits pratiques et fiables conçus pour résoudre de vrais problèmes.",
+    "name": "Développement logiciel",
+    "badge": "Lancement",
+    "description": "Développement logiciel de bout en bout — de la première idée au lancement et au-delà — conçu pour être fiable, évolutif et facile à maintenir.",
+    "ctaPrimary": "Démarrer votre projet",
+    "whatWeBuild": "Ce que nous créons",
+    "capabilities": [
+      "Développement d'applications web",
+      "Développement d'applications mobiles",
+      "Développement backend et API",
+      "Systèmes de gestion d'entreprise",
+      "Produits SaaS",
+      "Conception et gestion de bases de données",
+      "Tests logiciels",
+      "Développement de portfolios numériques"
+    ]
+  },
+  "about": {
+    "eyebrow": "Qui nous sommes",
+    "title": "À propos",
+    "subtitle": "Une entreprise technologique et d'ingénierie de confiance au Rwanda, au service de l'Afrique et des marchés internationaux.",
+    "missionTitle": "Notre mission",
+    "missionText": "Créer des solutions technologiques pratiques, fiables et accessibles qui aident les organisations à mieux fonctionner et à résoudre de vrais problèmes.",
+    "visionTitle": "Notre vision",
+    "visionText": "Devenir une entreprise technologique et d'ingénierie de confiance au Rwanda, puis servir l'Afrique et les marchés internationaux.",
+    "journeyEyebrow": "Notre parcours",
+    "journeyTitle": "Feuille de route de croissance",
+    "roadmap": [
+      { "title": "Étape 1 : Lancement", "description": "Priorité au développement logiciel. Enregistrement de l'entreprise, site web, portfolio, premiers clients." },
+      { "title": "Étape 2 : Créer des produits", "description": "Transformer les besoins récurrents en produits réutilisables ou SaaS. Contrats de support et de maintenance." },
+      { "title": "Étape 3 : Étendre", "description": "Piloter des solutions IoT. S'associer à des spécialistes qualifiés en réseau et en matériel." },
+      { "title": "Étape 4 : Passer à l'échelle", "description": "Intégration de systèmes, infrastructure gérée, automatisation, livraison régionale." }
+    ]
+  },
+  "portfolio": {
+    "eyebrow": "Nos réalisations",
+    "title": "Notre portfolio",
+    "subtitle": "Une sélection de projets en fintech, santé, éducation et analyse de données — réalisés pour des organisations au Rwanda et au-delà.",
+    "live": "En ligne",
+    "visitSite": "Voir le site",
+    "caseStudy": "Étude de cas",
+    "requestDemo": "Demander une démo",
+    "projects": [
+      {
+        "title": "TontineHub",
+        "subtitle": "Épargnez ensemble. Grandissez ensemble. Gagnez ensemble.",
+        "description": "Remplace les groupes de discussion désordonnés et les registres papier par une seule plateforme puissante. Pas de tableurs. Pas de confusion. Chaque franc suivi en temps réel, des prêts approuvés en quelques minutes — plus de 10 000 membres peuvent épargner.",
+        "category": "Plateforme Fintech"
+      },
+      {
+        "title": "GECO Rwanda",
+        "subtitle": "Leader des soins de l'épilepsie depuis 2010",
+        "description": "Une plateforme numérique soutenant des soins complets de l'épilepsie, luttant contre la stigmatisation et bâtissant des communautés inclusives à travers le Rwanda — transformant des vies grâce à des soins compassionnels depuis 2010.",
+        "category": "Santé · ONG"
+      },
+      {
+        "title": "Tontine MIS (TMIS)",
+        "subtitle": "Système d'information de gestion de tontine",
+        "description": "Un système d'information de gestion de tontine complet conçu avec Nuxt.js, rationalisant les opérations, la gestion des membres et le suivi financier des groupes d'épargne communautaires.",
+        "category": "Système de gestion"
+      },
+      {
+        "title": "Menya-Tech",
+        "subtitle": "Plateforme d'éducation à la technologie et à l'innovation",
+        "description": "Une plateforme d'apprentissage complète pour l'éducation à la technologie et à l'innovation, couvrant le développement logiciel (SOD), les réseaux, le multimédia, les modules universitaires et les programmes de diplôme technique.",
+        "category": "Plateforme EdTech"
+      },
+      {
+        "title": "El Verbuena",
+        "subtitle": "Portfolio de designer graphique et UI",
+        "description": "Un site portfolio moderne et élégant pour un designer graphique et UI, présentant des œuvres créatives, des projets de branding et une expertise en design visuel avec une esthétique épurée qui reflète l'identité du designer.",
+        "category": "Site web · Portfolio"
+      },
+      {
+        "title": "Tableau de bord d'analyse EHR",
+        "subtitle": "Surveillance prédictive du risque des patients",
+        "description": "Une plateforme d'aide à la décision clinique qui transforme les données brutes des dossiers médicaux électroniques (EHR) en actions — antibiogrammes cumulés, suivi de consommation ATC/DDD de l'OMS, scores de risque XGBoost et alertes en temps réel sur les superbactéries.",
+        "category": "Projet de fin d'études"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Témoignages",
+    "title": "Ce que disent nos clients",
+    "subtitle": "La confiance des entreprises à travers le Rwanda pour des solutions technologiques fiables.",
+    "items": [
+      { "role": "Équipe fondatrice", "text": "Nexora a transformé notre processus d'épargne manuel en une plateforme en temps réel. Chaque franc est suivi, les prêts sont approuvés en quelques minutes, et nos plus de 10 000 membres font enfin confiance aux chiffres." },
+      { "role": "Programme de soins de l'épilepsie", "text": "La plateforme conçue par Nexora donne à nos équipes de soins un espace unique pour gérer les cas et partager l'information. Elle a réduit la paperasse derrière les soins compassionnels que nous offrons." },
+      { "role": "Client de système de gestion", "text": "Nexora a conçu un système d'information de gestion qui a réuni nos opérations, les dossiers des membres et nos finances en un seul endroit — remplaçant des tableurs dispersés par un outil que notre équipe aime vraiment utiliser." },
+      { "role": "Équipe de la plateforme d'apprentissage", "text": "Ils ont livré une plateforme d'apprentissage qui soutient tout notre programme — développement logiciel, réseaux, multimédia et modules de diplôme — dans les délais et conçue pour évoluer avec nous." },
+      { "role": "Designer graphique et UI", "text": "Nexora a livré un portfolio qui correspond enfin à la qualité de mon travail — épuré, rapide et élégant. Il présente mes projets de branding et de design exactement comme je le souhaitais." }
+    ]
+  },
+  "cta": {
+    "badge": "Travaillons ensemble",
+    "title": "Prêt à construire quelque chose de grand ?",
+    "subtitle": "Transformons votre idée en une solution technologique fiable et évolutive. Dites-nous ce que vous construisez.",
+    "ctaPrimary": "Démarrer votre projet",
+    "ctaSecondary": "Découvrir nos services"
+  },
+  "contact": {
+    "eyebrow": "Contactez-nous",
+    "title": "Contact",
+    "subtitle": "Prêt à transformer votre entreprise grâce à la technologie ? Contactez-nous dès aujourd'hui.",
+    "infoTitle": "Informations de contact",
+    "infoDesc": "Joignez-nous via l'un des canaux ci-dessous et notre équipe vous répondra rapidement.",
+    "locationLabel": "Localisation",
+    "locationValue": "Kigali, Rwanda",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Téléphone",
+    "hoursLabel": "Heures d'ouverture",
+    "hoursValue": "Lun - Ven : 8h00 - 18h00",
+    "nameLabel": "Nom",
+    "namePlaceholder": "Votre nom",
+    "emailFieldLabel": "E-mail",
+    "emailPlaceholder": "votre{'@'}email.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Parlez-nous de votre projet...",
+    "submit": "Envoyer le message",
+    "success": "Votre application e-mail s'ouvre — il suffit d'envoyer et nous vous répondrons."
+  },
+  "footer": {
+    "tagline": "Construire l'avenir de la technologie au Rwanda et au-delà.",
+    "servicesTitle": "Services",
+    "services": ["Applications web", "Applications mobiles", "Backend & API", "Systèmes d'entreprise", "Produits SaaS", "Tests logiciels"],
+    "companyTitle": "Entreprise",
+    "companyAbout": "À propos",
+    "companyServices": "Services",
+    "companyPortfolio": "Portfolio",
+    "companyContact": "Contact",
+    "connectTitle": "Nous joindre",
+    "location": "Kigali, Rwanda",
+    "hours": "Lun - Ven : 8h00 - 18h00",
+    "copyright": "© 2026 Nexora Technologies. Tous droits réservés.",
+    "builtIn": "Conçu à Kigali, Rwanda."
+  }
+}
