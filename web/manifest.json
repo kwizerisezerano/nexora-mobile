@@ -1,11 +1,11 @@
 {
-    "name": "nexora_mobile",
-    "short_name": "nexora_mobile",
+    "name": "Nexora Technologies",
+    "short_name": "Nexora",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#FFFFFF",
+    "theme_color": "#28A745",
+    "description": "Nexora Technologies — software development and digital solutions.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
