@@ -66,9 +66,11 @@ jobs:
           echo "Release signing configured."
 
       - name: Build release APK
+        # Per-ABI split keeps the download ~3x smaller: the universal build ships
+        # three copies of Flutter's native engine (~50 MB of libs alone).
         run: |
           set -o pipefail
-          if flutter build apk --release 2>&1 | tee /tmp/build.log; then
+          if flutter build apk --release --split-per-abi 2>&1 | tee /tmp/build.log; then
             echo "APK built successfully."
           else
             # Surface the tail of the build log as annotations so the failure
@@ -78,10 +80,17 @@ jobs:
             done
             exit 1
           fi
+          # Publish the arm64 build under the stable name the website links to,
+          # and keep the 32-bit build for older devices. x86_64 (emulators only)
+          # is not distributed.
+          cd build/app/outputs/flutter-apk
+          mv app-arm64-v8a-release.apk app-release.apk
 
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: build/app/outputs/flutter-apk/app-release.apk
+          files: |
+            build/app/outputs/flutter-apk/app-release.apk
+            build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
           generate_release_notes: true
           fail_on_unmatched_files: true
