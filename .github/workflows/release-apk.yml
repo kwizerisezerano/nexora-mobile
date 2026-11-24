@@ -43,6 +43,28 @@ jobs:
       - name: Run tests
         run: flutter test
 
+      - name: Set up release signing
+        # Sign with the release keystore when the secrets are configured;
+        # otherwise fall back to the debug key (a plain sideload build).
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+        run: |
+          if [ -z "$KEYSTORE_BASE64" ]; then
+            echo "::warning::Signing secrets not set; building with the debug key."
+            exit 0
+          fi
+          echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/nexora-release.jks"
+          {
+            echo "storePassword=$KEYSTORE_PASSWORD"
+            echo "keyPassword=$KEY_PASSWORD"
+            echo "keyAlias=$KEY_ALIAS"
+            echo "storeFile=$RUNNER_TEMP/nexora-release.jks"
+          } > android/key.properties
+          echo "Release signing configured."
+
       - name: Build release APK
         run: |
           set -o pipefail
