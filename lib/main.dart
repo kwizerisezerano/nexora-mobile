@@ -4,6 +4,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'core/app_settings.dart';
 import 'l10n/app_strings.dart';
 import 'screens/about_screen.dart';
+import 'screens/chatbot_screen.dart';
 import 'screens/contact_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/portfolio_screen.dart';
@@ -94,6 +95,7 @@ class _AppShellState extends State<AppShell> {
       const AboutScreen(),
       PortfolioScreen(onNavigate: _goTo),
       const ContactScreen(),
+      const ChatbotScreen(),
     ];
 
     return PopScope(
@@ -139,6 +141,11 @@ class _AppShellState extends State<AppShell> {
                 icon: const Icon(Icons.mail_outline),
                 selectedIcon: const Icon(Icons.mail),
                 label: strings.t('nav.contact'),
+              ),
+              NavigationDestination(
+                icon: const Icon(Icons.smart_toy_outlined),
+                selectedIcon: const Icon(Icons.smart_toy),
+                label: strings.t('nav.aiChat'),
               ),
             ],
           ),

@@ -11,6 +11,10 @@ class Site {
   static const email = 'info@nexoratechnologies.com';
   static const phones = ['+250 787 059 322', '+250 790 989 830'];
 
+  /// Server-side proxy that forwards chat messages to the AI model. The
+  /// OpenRouter API key lives only on the website server, never in the app.
+  static const chatApiUrl = 'https://nexoratechnologies.com/api/chat';
+
   static const whatsappNumber = '250787059322';
   static const whatsappMessage =
       "Hello Nexora Technologies! I'd like to learn more about your software development services.";
