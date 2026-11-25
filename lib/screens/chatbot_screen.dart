@@ -13,6 +13,16 @@ class ChatbotScreen extends StatefulWidget {
 }
 
 class _ChatbotScreenState extends State<ChatbotScreen> {
+  static const _systemPrompt =
+      'You are a helpful AI assistant for Nexora Technologies, a Rwanda-based '
+      'software development company. Nexora currently focuses exclusively on '
+      'SOFTWARE DEVELOPMENT services including: web applications, mobile apps, '
+      'backend APIs, SaaS products, databases, enterprise systems, payment '
+      'integrations, and custom software solutions. Do NOT mention IoT, '
+      'networking, IT infrastructure, or hardware services as these are planned '
+      'for future expansion but not currently offered. Keep responses focused on '
+      'software development capabilities. Be professional, friendly, and helpful.';
+
   final List<Map<String, String>> _messages = [];
   final TextEditingController _messageController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
@@ -49,14 +59,20 @@ class _ChatbotScreenState extends State<ChatbotScreen> {
     _scrollToBottom();
 
     try {
-      // The OpenRouter API key stays on the website server; the app talks to
-      // the same `/api/chat` proxy the website chatbot uses.
       final response = await http.post(
-        Uri.parse(Site.chatApiUrl),
-        headers: {'Content-Type': 'application/json'},
+        Uri.parse(Site.openRouterUrl),
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ${Site.openRouterApiKey}',
+          'HTTP-Referer': 'https://nexoratechnologies.com',
+          'X-Title': 'Nexora Technologies',
+        },
         body: jsonEncode({
-          'model': 'nvidia/nemotron-3-ultra-550b-a55b:free',
-          'messages': _messages,
+          'model': Site.openRouterModel,
+          'messages': [
+            {'role': 'system', 'content': _systemPrompt},
+            ..._messages,
+          ],
         }),
       );
 
@@ -73,7 +89,7 @@ class _ChatbotScreenState extends State<ChatbotScreen> {
           _messages.add({
             'role': 'assistant',
             'content':
-                'Error: ${data['statusMessage'] ?? data['message'] ?? 'Failed to get response'}'
+                'Error: ${data['error']?['message'] ?? data['message'] ?? 'Failed to get response'}'
           });
         });
       }

@@ -68,9 +68,14 @@ jobs:
       - name: Build release APK
         # Per-ABI split keeps the download ~3x smaller: the universal build ships
         # three copies of Flutter's native engine (~50 MB of libs alone).
+        # The AI chat key is injected at compile time from the repo secret.
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
           set -o pipefail
-          if flutter build apk --release --split-per-abi 2>&1 | tee /tmp/build.log; then
+          if flutter build apk --release --split-per-abi \
+              --dart-define=OPENROUTER_API_KEY="$OPENROUTER_API_KEY" \
+              2>&1 | tee /tmp/build.log; then
             echo "APK built successfully."
           else
             # Surface the tail of the build log as annotations so the failure
